@@ -1,0 +1,139 @@
+<!--
+	Este codigo fuente es mayoritariamente autoria de:
+    	http://codigoweblibre.wordpress.com
+        http://codigoweblibre.comli.com
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Crear Elementos</title>
+	<script type="text/javascript">
+		function crearCampoTexto(){
+			capotTexto = document.createElement('input');
+			capotTexto.type = "text";
+			capotTexto.name = "name_campo_texto";
+			capotTexto.id = "id_campo_texto";
+			capotTexto.value = "http://codigoweblibre.comli.com";
+			capotTexto.size = "35";
+			document.getElementById('campos').appendChild(capotTexto);
+		}
+
+		function crearLabel(){
+			var label = document.createElement("label");
+			label.setAttribute("id","id_label");
+			labeltext = document.createTextNode("http://codigoweblibre.wordpress.com");
+			label.appendChild(labeltext);
+			document.getElementById('labels').appendChild(label);
+		}
+
+		function crearTextArea(){
+			var textArea = document.createElement("textarea");
+			textArea.setAttribute("id","id_textarea");
+			valorTextArea = document.createTextNode("http://codigoweblibre.wordpress.com");
+			textArea.appendChild(valorTextArea);
+			document.getElementById('textAreas').appendChild(textArea);
+		}
+
+		function crearBotones(){
+			botones = document.createElement('input');
+			botones.type = "button";
+			botones.name = "name_boton";
+			botones.id = "id_boton";
+			botones.value = "http://codigoweblibre.comli.com";
+			botones.size = "35";
+			document.getElementById('botones').appendChild(botones);
+		}
+
+		function crearBotonSubmit(){
+			botones_submit = document.createElement('input');
+			botones_submit.type = "submit";
+			botones_submit.name = "name_boton_submit";
+			botones_submit.id = "id_boton_submit";
+			botones_submit.value = "http://codigoweblibre.comli.com";
+			botones_submit.size = "35";
+			document.getElementById('botones_submit').appendChild(botones_submit);
+		}
+
+		function crearCheckBoxes(){
+			checkboxes = document.createElement('input');
+			checkboxes.type = "checkbox";
+			checkboxes.name = "name_checkbox";
+			checkboxes.id = "id_checkbox";
+			checkboxes.value = "http://codigoweblibre.comli.com";
+			document.getElementById('checkboxes').appendChild(checkboxes);
+		}
+
+		function crearSelect(){
+			var nuevoSelect = document.createElement("select"); //creo el nodo del select
+            nuevoSelect.setAttribute("name", "name_select"); //añado el nombre al select
+
+            var nuevoOption = document.createElement("option"); //creo el nodo option
+			var nuevoOption1 = document.createElement("option"); //creo el nodo option
+			var nuevoOption2 = document.createElement("option"); //creo el nodo option
+            var nodoTextoOption = document.createTextNode("http://codigoweblibre.comli.com"); //creo un nodo texto para el option
+			var nodoTextoOption1 = document.createTextNode("http://codigoweblibre.wordpress.com"); //creo un nodo texto para el option
+			var nodoTextoOption2 = document.createTextNode("canal youtube: codigoweblibre"); //creo un nodo texto para el option
+
+            nuevoOption.appendChild(nodoTextoOption); //añado el nodo texto al nodo option
+			nuevoOption1.appendChild(nodoTextoOption1); //añado el nodo texto al nodo option
+			nuevoOption2.appendChild(nodoTextoOption2); //añado el nodo texto al nodo option
+
+            nuevoSelect.appendChild(nuevoOption); //añado el nodo option al nodo select
+			nuevoSelect.appendChild(nuevoOption1); //añado el nodo option al nodo select
+			nuevoSelect.appendChild(nuevoOption2); //añado el nodo option al nodo select
+
+            var cuerpoRef = document.getElementsByTagName("body")[0]; //saco el nodo en el que quiero colgarlo
+			document.getElementById('selects').appendChild(nuevoSelect);
+			/*CITO LA FUENTE DE DONDE SAQUE EL EJEMPLO PARA ESTA FUNCION:
+				http://www.forosdelweb.com/f13/solucion-anadir-select-dinamicamente-474632/
+				LA SOLUCION LA PRESENTA EL USUARIO: MaBoRaK
+				SIMPLEMENTE FUEN ADAPTADO A ESTE EJEMPLO
+			*/
+		}
+
+		function crearRadio(){
+			radios = document.createElement('input');
+			radios.type = "radio";
+			radios.name = "name_radio";
+			radios.id = "id_radio";
+			radios.value = "http://codigoweblibre.comli.com";
+			document.getElementById('radios').appendChild(radios);
+		}
+
+		function crearPassword(){
+			campoPassword = document.createElement('input');
+			campoPassword.type = "password";
+			campoPassword.name = "name_password";
+			campoPassword.id = "id_password";
+			campoPassword.value = "http://codigoweblibre.comli.com";
+			campoPassword.size = "40";
+			document.getElementById('passwords').appendChild(campoPassword);
+		}
+
+		function crearColor(){
+			colors = document.createElement('input');
+			colors.type = "color";
+			colors.name = "name_color";
+			colors.id = "id_color";
+			colors.size = "40";
+			document.getElementById('colores').appendChild(colors);
+		}
+
+		function crearFile(){
+			files = document.createElement('input');
+			files.type = "file";
+			files.name = "name_file";
+			files.id = "id_file";
+			document.getElementById('files').appendChild(files);
+		}
+    	/*---------------------------------------------------------------------------------------------------------------------*/
+    </script>
+</head>
+<body background="img/wallpaper.png">
+	<form>
+    	<li><b>Cliente</b> :  => ESAP </li><li><b>Fecha de Inicio</b> : 0000-00-00 => 2014-04-07 </li><li><b>Fecha de Finalizacion</b> : 0000-00-00 => 2014-04-08 </li><li><b>Nombre del Evento</b> :  => CAPACITACION </li><li><b>Forma de Pago</b> :  => Tiene Anticipo </li><li>Se Agrego el Dia "<b>Lunes 07 Abril de 2014</b>"</li><li>Se Agrego el Dia "<b>Martes 08 Abril de 2014</b>"</li><li>Se Agrego el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b></li><li>Se Agrego el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b></li><li>Se Modifico el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;<b>Valor</b> : 3000000 => 0 <br /></li><li>Se Modifico el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;<b>Valor</b> : 3000000 => 0 <br /></li><li>Se Agrego el Requerimiento "<b>Mesero Pm</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Menu de Trabajo</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Sonido</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Video Beam </b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Mesero Am</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Refrigerio</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Refrigerio</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Menu de Trabajo</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Sonido</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Video Beam </b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Mesero Am</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Mesero Pm</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Lunes 07 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Refrigerio</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b></li><li>Se Agrego el Requerimiento "<b>Refrigerio</b>" en el Area o Espacio "<b>Salon Miravalle</b>" para el dia <b>Martes 08 Abril de 2014</b></li>
+    </form>
+</body>
+</html>
